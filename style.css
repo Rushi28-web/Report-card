@@ -1,0 +1,361 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Title Section */
+#title {
+    background: 
+  linear-gradient(to bottom, #19a49d, transparent),
+  radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent),
+  url('pattern.png');
+}
+
+.navbar-nav {
+  font-family: 'Roboto', sans-serif, cursive;
+  text-align: center;
+}
+
+.brand-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #007BFF;
+}
+/* }
+@keyframes moveImage {
+  0% {
+      transform: translate(0px, 0px); 
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+  }
+  50% {
+      transform: translate(100px, 50px); 
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6); 
+  }
+  100% {
+      transform: translate(0px, 0px); 
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+  }
+}
+
+.rc-img {
+  display: block;
+  width: 300px; 
+  height: 300px;;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+}
+
+
+img:hover {
+  transform: translate(100px, 50px); 
+} */
+.rc-img {
+  display: block;
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Limit on large screens */
+  height: auto;
+  border: none;
+  padding: 0;
+  margin: 0 auto; /* Center the image */
+  background: none;
+  box-shadow: none;
+  position: relative;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+.rc-img:hover {
+  transform: rotate(5deg) scale(1.05); /* Rotate and slightly scale up */
+}
+
+/* Shine effect */
+.rc-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.1) 100%);
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.rc-img:hover::after {
+  animation: shine 0.8s ease-in-out forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 600px) {
+  .rc-img {
+    width: 95%;
+    transform: none;
+  }
+
+  .rc-img:hover {
+    transform: rotate(3deg) scale(1.02);
+  }
+}
+
+
+
+h1 {
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.title-btn {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.title-icons {
+  color: #6bfadb;
+  font-weight: bold;
+}
+
+.row {
+  text-align: center;
+  margin-top: 6%;
+}
+
+/* Features Section */
+#features {
+  margin-top: 100px;
+}
+
+.icons {
+  color: #6bfadb;
+  font-size: 60px;
+}
+
+.icons:hover {
+  color: #6bfadb;
+}
+
+h3, p {
+  margin-top: 20px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: grey;
+}
+
+/* Form Section */
+#std_input_table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-top: 70px;
+}
+
+#std_input_table td, #std_input_table th {
+  border: 1px solid #ddd;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#std_input_table tr:nth-child(even) {
+  background-color: #A1E3D8;
+}
+
+#std_input_table tr:hover {
+  background-color: #F7FF93;
+}
+
+#std_input_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #ADD8E6;
+
+  color: white;
+}
+
+button {
+  border-radius: 7px;
+  text-shadow: 0px 0px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background:#ADD8E6;
+
+  padding: 5px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #d4a4eb;
+  text-decoration: none;
+}
+
+select {
+  width: 95%;
+  text-align: center;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+  width: 95%;
+  text-align: center;
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  color: #72eccf;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  border: 3px solid white;
+}
+
+input[type="submit"]:hover {
+  background-color: #F7FF93;
+  color: black;
+  border-radius: 20px;
+}
+
+/* PDF Table */
+.html_to_pdf {
+  border: 2px dotted rgb(141, 240, 233);
+  padding: 2px 5px 5px 5px;
+  background-color: #FFFBE7;
+}
+
+.school-title {
+  border: 5px solid #98eaff;
+  color: #F55353;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 2px auto;
+  padding: 10px;
+}
+
+/* Table Style */
+#report-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 30px;
+}
+
+#report-table td, #report-table th {
+  border: 1px solid #4deec3;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#report-table tr:nth-child(even) {
+  background-color: linear-gradient(#89ccf5,#0e489a);
+}
+
+#report-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color:linear-gradient(#6bc6f0,#1d46b6);
+  color: rgb(65, 192, 238);
+}
+
+/* B/W Report Card Section */
+.table_bw h1 {
+  font: bold 100% sans-serif;
+  letter-spacing: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Table */
+.table_bw table {
+  font-size: 75%;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table_bw table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.table_bw th, td {
+  border-width: 1px;
+  padding: 0.5em;
+  position: relative;
+  text-align: left;
+}
+
+.table_bw th, td {
+  border-radius: 0.25em;
+  border-style: solid;
+}
+
+.table_bw th {
+  background: #f4eeee;
+  border-color: #40a5e9;
+}
+
+.table_bw td {
+  border-color: #66b9f9;
+}
+
+.table_bw_div {
+  box-sizing: border-box;
+  height: 11in;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0.5in;
+  width: 7.5in;
+}
+
+.table_bw {
+  background: #e6caff;
+  border-radius: 1px;
+  box-shadow: 0 0 1in -0.25in rgba(242, 227, 254, 0.76);
+  margin: 30px;
+}
+
+@media print {
+  * 
+  html {
+    background: none;
+    padding: 0;
+  }
+  body {
+    box-shadow: none;
+    margin: 0;
+  }
+  span:empty {
+    display: none;
+  }
+  .add, .cut {
+    display: none;
+  }
+}
+
+@page {
+  margin: 0;
+}
+
+/* Footer */
+.footer a {
+  margin: 0 10px 0 10px;
+}
+
+.footer {
+  margin-top: 20px;
+}
